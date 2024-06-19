@@ -32,10 +32,10 @@ cd ReXTime
 1. Source Video Downloading
 
 ActivityNet
-Download the raw video data from the Download page(http://activity-net.org/download.html) at ActivityNet official website. You need to fill in their request form to have a 7-day-access to download the videos from the drive folders. You can find the form(https://docs.google.com/forms/d/e/1FAIpQLSeKaFq9ZfcmZ7W0B0PbEhfbTHY41GeEgwsa7WobJgGUhn4DTQ/viewform) here.
+Download the raw video data from the [Download page](http://activity-net.org/download.html) at ActivityNet official website. You need to fill in their request form to have a 7-day-access to download the videos from the drive folders. You can find the [form](https://docs.google.com/forms/d/e/1FAIpQLSeKaFq9ZfcmZ7W0B0PbEhfbTHY41GeEgwsa7WobJgGUhn4DTQ/viewform) here.
 
 QVHighlights
-Download raw video data from the link provided by Moment-DETR(https://github.com/jayleicn/moment_detr). Or you can press the link(https://nlp.cs.unc.edu/data/jielei/qvh/qvhilights_videos.tar.gz) here. Extract the file.
+Download raw video data from the [link]((https://nlp.cs.unc.edu/data/jielei/qvh/qvhilights_videos.tar.gz)) provided by [Moment-DETR](https://github.com/jayleicn/moment_detr). Extract the file.
 ```
 tar -xvzf qvhilights_videos.tar.gz
 ```
