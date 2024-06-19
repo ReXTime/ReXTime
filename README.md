@@ -144,6 +144,23 @@ print(output)
 
 ```
 
+## Evaluation
+
+This is an example of output/submission file in .jsonl format. For the assessment of moment grounding, you only need to provide "qid" and "pred_relevant_windows". For the assessment of multi-choice VQA, you only need to provide "qid" and "ans". For the assessment of grounding VQA, you need to provide "qid" "pred_relevant_windows" and "ans" in your submission file.
+```
+{"qid": "anet_val384", "pred_relevant_windows": [[0.0, 15.8304]], "ans": "A"}
+{"qid": "qvh_val114", "pred_relevant_windows": [[0.0, 25.50]], "ans": "A"}
+...
+```
+
+Modify the submission file path in ./evaluation/eval_sample.sh and run:
+
+```
+bash ./evaluation/eval_sample.sh
+```
+
+Here we only provide the ground truth file of validation set. To access on the test set, please submit the predicted file to [ReXTime Leaderboard](https://eval.ai/web/challenges/challenge-page/2326/overview).
+
 <!--
 **GTR-Benchmark/GTR-Benchmark** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
