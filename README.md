@@ -2,9 +2,9 @@
 
 ReXTime is designed to test AI models' temporal reasoning within video events, focusing on understanding cause-and-effect across different video segments, with 921 validation samples and 2,143 test samples.
 
-![Teaser](./images/teaser_v5.png)
-
 |[**Project Page**](https://rextime.github.io/) | [**Github**](https://github.com/ReXTime/ReXTime) | [**🏆Leaderboard**](https://eval.ai/web/challenges/challenge-page/2326/overview) | [**📖Paper**]() |
+
+![Teaser](./images/teaser_v5.png)
 
 ## Table of Contents
 
@@ -29,34 +29,34 @@ git clone https://github.com/ReXTime/ReXTime.git
 cd ReXTime
 ```
 
-1. Source Video Downloading
+1. ActivityNet Source Video Downloading
 
-ActivityNet
 Download the raw video data from the [Download page](http://activity-net.org/download.html) at ActivityNet official website. You need to fill in their request form to have a 7-day-access to download the videos from the drive folders. You can find the [form](https://docs.google.com/forms/d/e/1FAIpQLSeKaFq9ZfcmZ7W0B0PbEhfbTHY41GeEgwsa7WobJgGUhn4DTQ/viewform) here.
 
-QVHighlights
+2. QVHighlights Source Video Downloading
+
 Download raw video data from the [link]((https://nlp.cs.unc.edu/data/jielei/qvh/qvhilights_videos.tar.gz)) provided by [Moment-DETR](https://github.com/jayleicn/moment_detr). Extract the file.
 ```
 tar -xvzf qvhilights_videos.tar.gz
 ```
 
-2. Directory Structure
+3. Directory Structure
 
 ```
 .
-├── videos                                      # Path to the QVHighlights raw videos, can be anywhere.
+├── videos/                                     # Path to the QVHighlights raw videos, can be anywhere.
 │   ├── 9c_w8HU3hqc_210.0_360.0.mp4             # Video 1
 │   └── efCSWDWjm6g_360.0_510.0.mp4             # Video 2
-├── Anet_videos_15fps_short256                  # Path to the ActivityNet raw videos, can be anywhere.
+├── Anet_videos_15fps_short256/                 # Path to the ActivityNet raw videos, can be anywhere.
 │   ├── v_5R3h6lxne90.mp4                       # Video 1
 │   └── v_aQ-F9wr0HQ4.mp4                       # Video 2
-├── ReXTime                                     # Contains the annotations for Dataset splits
-│   ├── evaluation                              # Evaluation code
+├── ReXTime/                                    # Contains the annotations for Dataset splits
+│   ├── evaluation/                             # Evaluation code
 │   └── demo.py                                 # Huggingface demo script
 ...
 ```
 
-3. Install dependencies.
+4. Install dependencies.
 
 ```
 conda create --name=rextime python=3.10 -y
