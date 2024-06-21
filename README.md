@@ -9,38 +9,38 @@ ReXTime is designed to test AI models' temporal reasoning within video events, f
 ## Table of Contents
 
 * [Getting Started](#getting-started)
-    * [Prerequisites](#prerequisites)
-    * [Training](#training)
-    * [Inference](#inference)
-    * [Pretraining and Finetuning](#pretraining-and-finetuning)
-    * [Evaluation and Codalab Submission](#evaluation-and-codalab-submission)
-    * [Train Moment-DETR on your own dataset](#train-moment-detr-on-your-own-dataset)
-* [Demo: Run predictions on your own videos and queries](#run-predictions-on-your-own-videos-and-queries)
+    * [Clone this repo](#clone-this-repo)
+    * [Source video downloading](#source-video-downloading)
+    * [Directory structure](#directory-structure)
+    * [Install dependencies](#install-dependencies)
+* [Inference Demo](#inference-demo)
+* [Evaluation](#evaluation)
 * [Acknowledgement](#acknowledgement)
 * [LICENSE](#license)
 
 ## Getting Started 
 
-### Prerequisites
-0. Clone this repo
+### Clone this repo
 
 ```
 git clone https://github.com/ReXTime/ReXTime.git
 cd ReXTime
 ```
 
-1. ActivityNet Source Video Downloading
+### Source video downloading
+
+1. ActivityNet
 
 Download the raw video data from the [Download page](http://activity-net.org/download.html) at ActivityNet official website. You need to fill in their request form to have a 7-day-access to download the videos from the drive folders. You can find the [form](https://docs.google.com/forms/d/e/1FAIpQLSeKaFq9ZfcmZ7W0B0PbEhfbTHY41GeEgwsa7WobJgGUhn4DTQ/viewform) here.
 
-2. QVHighlights Source Video Downloading
+2. QVHighlights
 
 Download raw video data from the [link]((https://nlp.cs.unc.edu/data/jielei/qvh/qvhilights_videos.tar.gz)) provided by [Moment-DETR](https://github.com/jayleicn/moment_detr). Extract the file.
 ```
 tar -xvzf qvhilights_videos.tar.gz
 ```
 
-3. Directory Structure
+### Directory structure
 
 ```
 .
@@ -56,7 +56,7 @@ tar -xvzf qvhilights_videos.tar.gz
 ...
 ```
 
-4. Install dependencies.
+### Install dependencies
 
 ```
 conda create --name=rextime python=3.10 -y
@@ -64,7 +64,7 @@ conda activate rextime
 pip install -r requirements.txt
 ```
 
-## Inference demo
+## Inference Demo
 Here we provide a Huggingface demo to load the dataset and inference for multi-choice VQA.
 ```
 import os, json
