@@ -65,6 +65,8 @@ pip install -r requirements.txt
 ```
 
 ## Inference demo
+Here we provide a Huggingface demo to load the dataset and inference for multi-choice VQA.
+```
 import os, json
 from PIL import Image
 import requests
