@@ -193,7 +193,7 @@ Modify the submission file path in ./evaluation/eval_sample.sh and run:
 bash ./evaluation/eval_sample.sh
 ```
 
-Here we only provide the ground truth file of validation set in 'data/rextime_val.jsonl'. To access on the test set, please submit the predicted file to [ReXTime Leaderboard](https://eval.ai/web/challenges/challenge-page/2326/overview).
+Here we only provide the ground truth file of validation set in 'data/rextime_val.jsonl'. To access on the test set, please submit the predicted file to [ReXTime Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/19544?secret_key=4ac51fd2-1349-45c3-900e-9144217413a1).
 
 ## Acknowledgement
 * The evaluation code is build from [Moment-detr](https://github.com/jayleicn/moment_detr). 
