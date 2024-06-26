@@ -55,9 +55,11 @@ tar -xvzf qvhilights_videos.tar.gz
 ├── Anet_videos_15fps_short256/                 # Path to the ActivityNet raw videos, can be anywhere.
 │   ├── v_5R3h6lxne90.mp4                       # Video 1
 │   └── v_aQ-F9wr0HQ4.mp4                       # Video 2
-├── ReXTime/                                    # Contains the annotations for Dataset splits
+├── ReXTime/                                    # Code repo
+│   ├── ReXTime/                                # Huggingface dataset repo
 │   ├── evaluation/                             # Evaluation code
-│   └── demo.py                                 # Huggingface demo script
+│   ├── demo/                                   # Inference demo script
+│   └── requirements.txt                        # Packages for environment
 ...
 ```
 
