@@ -70,11 +70,16 @@ pip install -r requirements.txt
 ```
 
 ## Inference Demo
-Here we provide open source model evaluation demo and proprietary models evaluation demo. You need to modify the path to the dataset repo and paths to the directory of two source raw videos in the scripts.
+Here we provide open source model evaluation demo and proprietary models evaluation demo. You need to modify the path to the dataset repo and paths to the directory of two source raw videos in the scripts. For proprietary models evaluation, you need to fill in you API key and organization ID.
 
 Open source MLLM demo:
 ```
-python3 ./demo.py
+python3 ./demo/inference.py
+```
+
+Proprietary MLLM demo:
+```
+python3 ./demo/request.py
 ```
 
 
