@@ -26,9 +26,9 @@ def read_video_pyav(container, indices):
     return np.stack([x.to_ndarray(format="rgb24") for x in frames])
 
 # Load the dataset
-dataset_path = "/home/shinji106/ntu/PrivateEval/rextime/ReXTime"
-anet_vid_dir = '/home/shinji106/Data/ActivityNet/Anet_videos_15fps_short256'
-qvh_vid_dir = '/data/ntu/videos'
+dataset_path = "<Path to the Huggingface dataset repo>"
+anet_vid_dir = '<Path to the ActivityNet raw video directory>'
+qvh_vid_dir = '<Path to the QVHighlights raw video directory>'
 
 rextime_data = load_dataset(dataset_path, split="validation")
 input_data = rextime_data[0]
