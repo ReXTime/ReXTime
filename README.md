@@ -41,8 +41,9 @@ Download the raw video data from the [Download page](http://activity-net.org/dow
 
 2. QVHighlights
 
-Download raw video data from the [link]((https://nlp.cs.unc.edu/data/jielei/qvh/qvhilights_videos.tar.gz)) provided by [Moment-DETR](https://github.com/jayleicn/moment_detr). Extract the file.
+Download raw video data from the [link](https://nlp.cs.unc.edu/data/jielei/qvh/qvhilights_videos.tar.gz) provided by [Moment-DETR](https://github.com/jayleicn/moment_detr). Extract the file.
 ```
+wget https://nlp.cs.unc.edu/data/jielei/qvh/qvhilights_videos.tar.gz
 tar -xvzf qvhilights_videos.tar.gz
 ```
 
