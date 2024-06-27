@@ -80,16 +80,16 @@ Open source MLLM demo:
 ```
 python ./demo/inference.py \
     --dataset_path ./ReXTime \
-    --anet_vid_dir <Path to the AcrivityNet video directory> \
-    --qvh_vid_dir <Paht to the QVHighlights video directory>
+    --anet_vid_dir ${Path to the AcrivityNet video directory} \
+    --qvh_vid_dir ${Paht to the QVHighlights video directory}
 ```
 
 Proprietary MLLM demo:
 ```
 OPENAI_API_KEY="sk-***********************************" python ./demo/request.py \
     --dataset_path ./ReXTime \
-    --anet_vid_dir <Path to the AcrivityNet video directory> \
-    --qvh_vid_dir <Paht to the QVHighlights video directory>
+    --anet_vid_dir ${Path to the AcrivityNet video directory} \
+    --qvh_vid_dir ${Paht to the QVHighlights video directory}
 ```
 
 
