@@ -76,12 +76,12 @@ Here we provide open source model evaluation demo and proprietary models evaluat
 
 Open source MLLM demo:
 ```
-python3 ./demo/inference.py
+python ./demo/inference.py
 ```
 
 Proprietary MLLM demo:
 ```
-python3 ./demo/request.py
+python ./demo/request.py
 ```
 
 
