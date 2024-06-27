@@ -2,6 +2,7 @@ import os, json, time
 import numpy as np
 import cv2
 import base64
+import argparse
 
 from datasets import load_dataset
 from openai import OpenAI
@@ -36,24 +37,25 @@ def replace_all(text, replace_dict):
         text = text.replace(key, value)
     return text
 
-# Load the dataset
-dataset_path = "<Path to the Huggingface dataset repo>"
-anet_vid_dir = '<Path to the ActivityNet raw video directory>'
-qvh_vid_dir = '<Path to the QVHighlights raw video directory>'
+# Arguments parsing
+parser = argparse.ArgumentParser(description='ChatGPT-based QA evaluation.')
+parser.add_argument("--dataset_path", type=str, help="Path to the Huggingface dataset repo")
+parser.add_argument("--anet_vid_dir", type=str, help="Path to the ActivityNet raw video directory")
+parser.add_argument("--qvh_vid_dir", type=str, help="Path to the QVHighlights raw video directory")
+args = parser.parse_args()
 
-rextime_data = load_dataset(dataset_path, split="validation")
+# Load the dataset
+rextime_data = load_dataset(args.dataset_path, split="validation")
 input_data = rextime_data[0]
 
 # Configure the GPT chatbot
-organization = "<Your organization ID>"
-api_key = "<Your API key>"
-client = OpenAI(api_key=api_key, organization=organization)
+client = OpenAI()
 
 # Decode the video frames
 if input_data['source'] == "qvhighlights_val":
-    video_path = os.path.join(qvh_vid_dir, input_data['vid'] + '.mp4')
+    video_path = os.path.join(args.qvh_vid_dir, input_data['vid'] + '.mp4')
 else:
-    video_path = os.path.join(anet_vid_dir, input_data['vid'] + '.mp4')
+    video_path = os.path.join(args.anet_vid_dir, input_data['vid'] + '.mp4')
 frames, duration = decode_video(video_path)
 print("Total duration {}, {} frames selected".format(duration, len(frames)))
 
@@ -139,3 +141,9 @@ print("Predicted Answer: ", ans)
 print(
     f"Token usage: prompt_tokens={prompt_tokens}, completion_tokens={completion_tokens}, total_price={price}"
 )
+output = {
+    "qid": input_data['qid'],
+    "pred_relevant_windows": [answer_json['relevant_span']],
+    "ans": ans
+}
+print(output)

@@ -72,32 +72,41 @@ pip install -r requirements.txt
 ```
 
 ## Inference Demo
-Here we provide open source model evaluation demo and proprietary models evaluation demo. You need to modify the path to the dataset repo and paths to the directory of two source raw videos in the scripts. For proprietary models evaluation, you need to fill in you API key and organization ID.
+Here we provide open source model evaluation demo and proprietary models evaluation demo. You need to modify the path to the dataset repo and paths to the directory of two source raw videos in the following scripts. For proprietary models evaluation, you need to fill in your API key.
 
 Open source MLLM demo:
 ```
-python ./demo/inference.py
+python ./demo/inference.py \
+    --dataset_path ./ReXTime \
+    --anet_vid_dir <Path to the AcrivityNet video directory> \
+    --qvh_vid_dir <Paht to the QVHighlights video directory>
 ```
 
 Proprietary MLLM demo:
 ```
-python ./demo/request.py
+OPENAI_API_KEY="sk-***********************************" python ./demo/request.py \
+    --dataset_path ./ReXTime \
+    --anet_vid_dir <Path to the AcrivityNet video directory> \
+    --qvh_vid_dir <Paht to the QVHighlights video directory>
 ```
 
 
 ## Evaluation
 
-This is an example of output/submission file in .jsonl format. For the assessment of moment grounding, you only need to provide "qid" and "pred_relevant_windows". For the assessment of multi-choice VQA, you only need to provide "qid" and "ans". For the assessment of grounding VQA, you need to provide "qid" "pred_relevant_windows" and "ans" in your submission file.
+This is an example of output/submission file in .jsonl format. For the assessment of moment grounding, you only need to provide "qid" and "pred_relevant_windows". For the assessment of multi-choice VQA, you only need to provide "qid" and "ans". For the assessment of grounding VQA, you need to provide "qid" "pred_relevant_windows" and "ans" in your submission file. For grounding VQA evaluation, the predicted answer should be conditioned on the predicted time span.
 ```
 {"qid": "anet_val384", "pred_relevant_windows": [[0.0, 15.8304]], "ans": "A"}
 {"qid": "qvh_val114", "pred_relevant_windows": [[0.0, 25.50]], "ans": "A"}
 ...
 ```
 
-Modify the submission file path in ./evaluation/eval_sample.sh and run:
+Modify the file paths in the following and run:
 
 ```
-bash ./evaluation/eval_sample.sh
+python ./evaluation/rextime_eval.py \
+    --submission_path ${submission_path} \
+    --gt_path ${gt_path} \
+    --save_path ${save_path}
 ```
 
 Here we only provide the ground truth file of validation set in 'data/rextime_val.jsonl'. To access on the test set, please submit the predicted file to [ReXTime Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/19544?secret_key=4ac51fd2-1349-45c3-900e-9144217413a1).

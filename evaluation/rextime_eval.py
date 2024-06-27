@@ -137,7 +137,7 @@ def eval_grounding_vqa(submission, ground_truth, verbose=True):
             ret_metrics[name] = {"MR-mIoU": miou_at_one,
                                 #  "MR-mAP": iou_thd2average_precision,
                                  "MR-R1": iou_thd2recall_at_one,
-                                 "GQA": gqa_acc}
+                                 "VQA,mIoU": gqa_acc}
 
             # iou_thd2average_precision = compute_mr_ap(_submission, _ground_truth, num_workers=8, chunksize=50)
             # iou_thd2recall_at_one = compute_mr_r1(_submission, _ground_truth)
@@ -156,7 +156,7 @@ def eval_vqa(submission, ground_truth, verbose=True):
     
     # Calculate the accuracy of ans and gt_ans
     scores = {}
-    scores["vqa_acc"] = sum([a == b for a, b in zip(ans, gt_ans)]) / len(ans)
+    scores["VQA"] = sum([a == b for a, b in zip(ans, gt_ans)]) / len(ans)
     return scores
 
 def eval_submission(submission, ground_truth, verbose=True, match_number=True):
@@ -196,6 +196,9 @@ def eval_submission(submission, ground_truth, verbose=True, match_number=True):
         eval_metrics.update(vqa_scores)
         eval_metrics_brief.update(vqa_scores)
     else:
+        vqa_scores = eval_vqa(submission, ground_truth, verbose=verbose)
+        eval_metrics.update(vqa_scores)
+        eval_metrics_brief.update(vqa_scores)
         moment_ret_scores = eval_grounding_vqa(
             submission, ground_truth, verbose=verbose)
         eval_metrics.update(moment_ret_scores)
@@ -211,7 +214,7 @@ def eval_submission(submission, ground_truth, verbose=True, match_number=True):
             "MR-full-R1@0.5": moment_ret_scores["full"]["MR-R1"]["0.5"],
             # "MR-full-R1@0.7": moment_ret_scores["full"]["MR-R1"]["0.7"],
             # "GQA@0.3": moment_ret_scores["full"]["GQA"]["GQA@0.3"],
-            "GQA@0.5": moment_ret_scores["full"]["GQA"]["GQA@0.5"],
+            "VQA,mIoU@0.5": moment_ret_scores["full"]["VQA,mIoU"]["VQA,mIoU@0.5"],
             # "GQA@0.7": moment_ret_scores["full"]["GQA"]["GQA@0.7"],
         }
         eval_metrics_brief.update(

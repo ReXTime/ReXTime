@@ -27,7 +27,7 @@ def compute_gqa_accuracy(pred_ans, gt_ans, pred_gt_iou, thres = [0.3, 0.5, 0.7])
         for i, iou in enumerate(pred_gt_iou):
             if iou >= t and pred_ans[i] == gt_ans[i]:
                 correct += 1
-        acc["GQA@{}".format(t)] = correct / len(pred_ans)
+        acc["VQA,mIoU@{}".format(t)] = correct / len(pred_ans)
     return acc
 
 
