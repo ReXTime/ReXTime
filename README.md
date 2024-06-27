@@ -113,7 +113,8 @@ python ./evaluation/rextime_eval.py \
 Here we only provide the ground truth file of validation set in 'data/rextime_val.jsonl'. To access on the test set, please submit the predicted file to [ReXTime Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/19544?secret_key=4ac51fd2-1349-45c3-900e-9144217413a1).
 
 ## Acknowledgement
-* The evaluation code is build from [Moment-detr](https://github.com/jayleicn/moment_detr). 
+* The evaluation code is build from [Moment-detr](https://github.com/jayleicn/moment_detr).
+* The inference code is build from [Video-LLaVA](https://huggingface.co/docs/transformers/model_doc/video_llava).
 
 ## License
 The annotation files are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license, see [./data/LICENSE](data/LICENSE). All the code are under [MIT](https://opensource.org/licenses/MIT) license, see [LICENSE](./LICENSE).
