@@ -10,6 +10,7 @@ ReXTime is designed to test AI models' temporal reasoning within video events, f
 
 * [Getting Started](#getting-started)
     * [Clone this repo](#clone-this-repo)
+    * [Clone dataset from Huggingface](#clone-dataset-from-huggingface)
     * [Source video downloading](#source-video-downloading)
     * [Directory structure](#directory-structure)
     * [Install dependencies](#install-dependencies)
