@@ -2,7 +2,7 @@
 
 ReXTime is designed to test AI models' temporal reasoning within video events, focusing on understanding cause-and-effect across different video segments, with 921 validation samples and 2,143 test samples.
 
-|[**🏠Project Page**](https://rextime.github.io/) | [**🐙Github**](https://github.com/ReXTime/ReXTime) | [**🤗Huggingface Dataset**](https://huggingface.co/datasets/ReXTime/ReXTime) | [**🏆Leaderboard(Coming soon!)**]() | [**📖Paper**]() |
+|[**🏠Project Page**](https://rextime.github.io/) | [**🐙Github**](https://github.com/ReXTime/ReXTime) | [**🤗Huggingface Dataset**](https://huggingface.co/datasets/ReXTime/ReXTime) | [**🏆Leaderboard(Coming soon!)**]() | [**📖Paper**](https://arxiv.org/abs/2406.19392) |
 
 ![Teaser](./images/teaser_v5.png)
 
