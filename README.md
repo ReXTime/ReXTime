@@ -2,7 +2,7 @@
 
 ReXTime is designed to test AI models' temporal reasoning within video events, focusing on understanding cause-and-effect across different video segments, with 921 validation samples and 2,143 test samples.
 
-|[**🏠Project Page**](https://rextime.github.io/) | [**🐙Github**](https://github.com/ReXTime/ReXTime) | [**🤗Huggingface Dataset**](https://huggingface.co/datasets/ReXTime/ReXTime) | [**🏆Leaderboard(Coming soon!)**]() | [**📖Paper**](https://arxiv.org/abs/2406.19392) |
+|[**🏠Project Page**](https://rextime.github.io/) | [**🐙Github**](https://github.com/ReXTime/ReXTime) | [**🤗Huggingface Dataset**](https://huggingface.co/datasets/ReXTime/ReXTime) | [**🏆Leaderboard**](https://codalab.lisn.upsaclay.fr/competitions/19587?secret_key=b75b74e0-dc01-4a4f-8bb7-06d172637ef5) | [**📖Paper**](https://arxiv.org/abs/2406.19392) |
 
 ![Teaser](./images/teaser_v5.png)
 
@@ -111,7 +111,7 @@ python ./evaluation/rextime_eval.py \
     --save_path ${save_path}
 ```
 
-Here we only provide the ground truth file of validation set in 'data/rextime_val.jsonl'. To access on the test set, please submit the predicted file to [ReXTime Leaderboard]()(Coming soon!).
+Here we only provide the ground truth file of validation set in 'data/rextime_val.jsonl'. To access on the test set, please submit the predicted file to [ReXTime Leaderboard](https://codalab.lisn.upsaclay.fr/competitions/19587?secret_key=b75b74e0-dc01-4a4f-8bb7-06d172637ef5).
 
 ## Acknowledgement
 * The evaluation code is build from [Moment-detr](https://github.com/jayleicn/moment_detr).
