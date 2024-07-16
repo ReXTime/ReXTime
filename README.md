@@ -120,6 +120,17 @@ Here we only provide the ground truth file of validation set in 'data/rextime_va
 ## License
 The annotation files are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. All the code are under [MIT](https://opensource.org/licenses/MIT) license, see [LICENSE](./LICENSE).
 
+## Cite
+BibTeX:
+```
+@article{chen2024rextime,
+  title={ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos},
+  author={Chen, Jr-Jen and Liao, Yu-Chien and Lin, Hsi-Che and Yu, Yu-Chu and Chen, Yen-Chun and Wang, Yu-Chiang Frank},
+  journal={arXiv preprint arXiv:2406.19392},
+  year={2024}
+}
+```
+
 <!--
 **GTR-Benchmark/GTR-Benchmark** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
