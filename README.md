@@ -1,4 +1,4 @@
-# ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos
+# ReXTime: A Benchmark Suite for Reasoning-Across-Time in Videos (NeurIPS 2024 D&B Poster Paper)
 
 ReXTime is designed to test AI models' temporal reasoning within video events, focusing on understanding cause-and-effect across different video segments, with 921 validation samples and 2,143 test samples.
 
